@@ -1,0 +1,510 @@
+<section class="nav-header-section">
+    <header class="header-part">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a routerLink="/"><img src="images/logo.png" alt="Tour Logo"></a>
+                </div>
+                <div class="header-top-left">
+                    <button class="search-icon-btn">
+                        <span class="iconify" data-icon="prime:search"></span>
+                    </button>
+                    <button class="flag-icon-btn">
+                        <img src="images/flag.png" alt="Flag">
+                    </button>
+                    <div class="header-currency-dropdown">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="currencyDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ selectedCurrency }}
+                            </button>
+
+                            <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+                                <li><a class="dropdown-item" (click)="setCurrency('USD')">USD — US Dollar</a></li>
+                                <li><a class="dropdown-item" (click)="setCurrency('EUR')">EUR — Euro</a></li>
+                                <li><a class="dropdown-item" (click)="setCurrency('GBP')">GBP — British Pound</a></li>
+                                <li><a class="dropdown-item" (click)="setCurrency('BDT')">BDT — Bangladeshi Taka</a>
+                                </li>
+                                <li><a class="dropdown-item" (click)="setCurrency('INR')">INR — Indian Rupee</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="sign-in-btn">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+            <nav class="main-navigation-part">
+                <ul>
+                    <li><a routerLink="/"><span class="iconify" data-icon="clarity:plane-line"></span>
+                            <span>Flights</span></a></li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="mingcute:hotel-line"></span>
+                            <span>Hotel</span></a></li>
+                    <li><a routerLink="/"><span class="iconify"
+                                data-icon="fluent:luggage-24-regular"></span><span>Tour</span></a></li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="la:plane"></span><span>Charter</span></a>
+                    </li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="lineicons:car-2"></span><span>Rental
+                                Car</span></a></li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="hugeicons:id"></span><span>Visa</span></a>
+                    </li>
+                    <li><a routerLink="/"><span class="iconify"
+                                data-icon="mdi:shield-airplane-outline"></span><span>Insurance</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- mobile header -->
+    <header class="mobile-header-part">
+        <div class="container">
+            <div class="mobile-header-top">
+                <div class="logo">
+                    <a routerLink="/"><img src="images/logo.png" alt="Tour Logo"></a>
+                </div>
+                <div class="mobile-header-right">
+                    <button class="search-icon-btn">
+                        <span class="iconify" data-icon="prime:search"></span>
+                    </button>
+                    <a class="mobile-menu-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                        <span class="iconify" data-icon="mdi:menu"></span>
+                    </a>
+
+                    <!-- offcanvas -->
+                    <div class="mobile-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <img src="images/logo.png" alt="logo">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul>
+                                <li><a routerLink="/"><span class="iconify" data-icon="clarity:plane-line"></span>
+                                        <span>Flights</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="mingcute:hotel-line"></span><span>Hotel</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="fluent:luggage-24-regular"></span><span>Tour</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="la:plane"></span><span>Charter</span></a>
+                                </li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="lineicons:car-2"></span><span>Rental Car</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="hugeicons:id"></span><span>Visa</span></a>
+                                </li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="mdi:shield-airplane-outline"></span><span>Insurance</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-footer">
+                            <div class="header-currency-dropdown">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ selectedCurrency }}
+                                    </button>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" (click)="setCurrency('USD')">USD — US Dollar</a>
+                                        </li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('EUR')">
+
+                                                EUR — Euro</a></li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('GBP')">
+                                                GBP — British Pound</a></li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('BDT')">
+                                                BDT — Bangladeshi Taka</a></li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('INR')">
+                                                INR — Indian Rupee</a></li>
+                                    </ul>
+                                </div>
+                                <button class="sign-in-btn">
+                                    Sign In
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+
+
+<section class="tour-details-part">
+    <div class="container">
+        <div class="tour-details-header">
+            <div class="tour-details-header-left">
+                <h1>Full Day Private City Tour of Karachi</h1>
+                <div class="tour-details-rating">
+                    <div class="d-flex align-items-center gap-1">
+                        <i class="iconify" data-icon="tabler:star-filled"></i>
+                        <i class="iconify" data-icon="tabler:star-filled"></i>
+                        <i class="iconify" data-icon="tabler:star-filled"></i>
+                        <i class="iconify" data-icon="tabler:star-filled"></i>
+                        <i class="iconify" data-icon="tabler:star-filled"></i>
+                    </div>
+                    <span>5.0 (2 Reviews)</span>
+                </div>
+            </div>
+            <div class="tour-details-header-right">
+                <button><i class="iconify" data-icon="basil:share-outline"></i>Share</button>
+                <button><i class="iconify" data-icon="material-symbols:reviews-outline-rounded"></i>Review</button>
+                <button><i class="iconify" data-icon="hugeicons:favourite"></i>Favourite</button>
+            </div>
+        </div>
+        <div class="tour-details-image">
+            <div class="left-img">
+                <img src="images/img-1.jpg" alt="Tour Details Image">
+                <div class="overflow-img-icon">
+                    <button><i class="iconify" data-icon="mynaui:image"></i>30</button>
+                </div>
+            </div>
+            <div class="right-img">
+                <img src="images/img-2.jpg" alt="Tour Details Image 2">
+                <img src="images/img-3.jpg" alt="Tour Details Image 2">
+            </div>
+        </div>
+        <div class="tour-details-info">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="tour-details-info-left">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">Overview</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">Details</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">Itinerary</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">Operator</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">Reviews</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content main-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <h2>About</h2>
+                                <p>The Full Day City Tour of Karachi provides you a great experience of local culture,
+                                    Hussle and bustle of Pakistan's Premier Industrial and Financial Centre. Karachi
+                                    known
+                                    as the City of lights has a fast paced life. This Tour is specially designed to
+                                    provide …</p>
+                                <div class="tour-details-feature">
+                                    <div class="tour-details-feature-item">
+                                        <div class="tour-details-feature-item-icon">
+                                            <i class="iconify" data-icon="basil:history-outline"></i>
+                                        </div>
+                                        <div>
+                                            <p><strong>Free cancellation:</strong> Full refund if cancelled up to 24
+                                                hours
+                                                before the experience starts (local time).</p>
+                                        </div>
+                                    </div>
+                                    <div class="tour-details-feature-item">
+                                        <div class="tour-details-feature-item-icon">
+                                            <i class="iconify" data-icon="famicons:card-outline"></i>
+                                        </div>
+                                        <div>
+                                            <p><strong>Reserve now & pay later:</strong> Secure your spot while staying
+                                                flexible.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tour-details-feature-item">
+                                        <div class="tour-details-feature-item-icon">
+                                            <i class="iconify"
+                                                data-icon="streamline-freehand:currency-dollar-decrease"></i>
+                                        </div>
+                                        <div>
+                                            <p><strong>Lowest price guarantee:</strong> Find a lower price online? Get
+                                                the
+                                                difference refunded!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-details-feature-two">
+                                    <div class="tour-details-feature-two-items">
+                                        <i class="iconify" data-icon="ri:ai-agent-line"></i>
+                                        <p>Ages 25-65</p>
+                                    </div>
+                                    <div class="tour-details-feature-two-items">
+                                        <i class="iconify" data-icon="hugeicons:date-time"></i>
+                                        <p>Duration: 7–9 hours</p>
+                                    </div>
+                                    <div class="tour-details-feature-two-items">
+                                        <i class="iconify" data-icon="uil:stopwatch"></i>
+                                        <p>Start time: Check availability</p>
+                                    </div>
+                                    <div class="tour-details-feature-two-items">
+                                        <i class="iconify" data-icon="tabler:ticket"></i>
+                                        <p>Mobile ticket</p>
+                                    </div>
+                                    <div class="tour-details-feature-two-items">
+                                        <i class="iconify" data-icon="heroicons:language-20-solid"></i>
+                                        <p>Live guide: English</p>
+                                    </div>
+                                </div>
+                                <div class="tour-details-feature-three">
+                                    <h2>Itinerary</h2>
+                                    <div class="tour-details-feature-three-items">
+                                        <div class="tour-details-feature-three-item-start">
+                                            <div class="three-item-icon">
+                                                <i class="iconify" data-icon="ep:location"></i>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>You'll get picked up</h3>
+                                                <a>See departure details</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                1
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>Quaid-e-Azam House Museum</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                2
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>State Bank Museum</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                3
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>Mazar-E-Quaid</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                4
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>Empress Market</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                5
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>Frere Hall</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                6
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>Mohatta Palace Museum</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                7
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>Dolmen Mall Clifton</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+                                        <div class="tour-details-feature-three-item">
+                                            <div class="three-item-icon">
+                                                8
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>Sea View Beach</h3>
+                                                <p>Stop: 60 minutes - Admission included</p>
+                                                <a>See details & photo</a>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="tour-details-feature-three-item-start">
+                                            <div class="three-item-icon">
+                                                <i class="iconify" data-icon="ep:location"></i>
+                                            </div>
+                                            <div class="d-flex flex-column gap-1">
+                                                <h3>You'll return to the starting point</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tour-details-feature-four">
+                                    <h2>Includes</h2>
+                                    <div>
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4430.737975009142!2d67.0430695848464!3d24.87321558643985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e5e736977c1%3A0x70ed36c8a6891d3a!2sMazaar%20e%20Quaid%20Muhammad%20Ali%20Jinnah%20Mausoleum!5e0!3m2!1sen!2sbd!4v1760876176527!5m2!1sen!2sbd"
+                                            width="100%" height="450" style="border:0;" allowfullscreen=""
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel"
+                                aria-labelledby="disabled-tab" tabindex="0">...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tour-details-info-right">
+                        <div class="tour-details-booking-card">
+                            <div class="tour-details-booking-card-header">
+                                <div>
+                                    <h5>Total price</h5>
+                                    <h3>$1759 <span>inc. taxes</span></h3>
+                                    <p>Price based on selections bellow.</p>
+                                </div>
+                                <div class="tour-details-booking-card-header-icon">
+                                    <i class="iconify" data-icon="material-symbols:done-rounded"></i>
+                                </div>
+                            </div>
+                            <div class="tour-details-booking-card-body">
+                                <div class="d-flex flex-column gap-1">
+                                    <label for="">Date</label>
+                                    <input type="date" placeholder="Select Date">
+                                </div>
+                                <div class="d-flex flex-column gap-1">
+                                    <label for="">Participants</label>
+                                    <div class="dropdown">
+                                        <button class="btn btn-outline-primary dropdown-toggle" type="button"
+                                            id="currencyDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Select Participants
+                                        </button>
+
+                                        <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center p-2">
+                                                    <label for="">Adult (Age 16+)</label>
+                                                    <div class="people-input">
+                                                        <button class="people-input-btn">-</button>
+                                                        <span class="people-input-value">0</span>
+                                                        <button class="people-input-btn">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center p-2">
+                                                    <label for="">Child (Age 2-5)</label>
+                                                    <div class="people-input">
+                                                        <button class="people-input-btn">-</button>
+                                                        <span class="people-input-value">0</span>
+                                                        <button class="people-input-btn">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center p-2">
+                                                    <label for="">Infant(Age 0-1)</label>
+                                                    <div class="people-input">
+                                                        <button class="people-input-btn">-</button>
+                                                        <span class="people-input-value">0</span>
+                                                        <button class="people-input-btn">+</button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="booking-card-info">
+                                    <div><i class="iconify" data-icon="wi:time-4"></i>
+                                    </div>
+                                    <div>
+                                        <h4>10:00 AM</h4>
+                                        <p>Starting Time</p>
+                                    </div>
+                                </div>
+                                <div class="booking-card-info">
+                                    <div><i class="iconify" data-icon="hugeicons:task-01"></i>
+                                    </div>
+                                    <div>
+                                        <h4>Instant confirmation</h4>
+                                        <p>Once you confirm booking, you'll receive details to print.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="booking-btn">Proceed to booking</button>
+                        </div>
+                        <div class="tour-details-booking-card">
+                            <div class="tour-details-booking-card-header">
+                                <div>
+                                    <h4>Customize Tour</h4>
+                                </div>
+                            </div>
+                            <div class="tour-details-booking-card-body">
+                                <div class="d-flex flex-column gap-2">
+                                    <input type="text" placeholder="Your Name">
+                                    <input type="date" placeholder="Travel Date">
+                                    <input type="text" placeholder="Place to visit">
+                                    <input type="text" placeholder="Departure Country">
+                                    <input type="text" placeholder="Departure City">
+                                    <input type="text" placeholder="Persond">
+                                    <input type="text" placeholder="Days">
+                                    <input type="text" placeholder="Rooms">
+                                </div>
+                            </div>
+                            <button class="booking-btn">Book Now</button>
+                        </div>
+                        <div class="tour-details-booking-card contact-us-card">
+                            <div class="tour-details-booking-card-header">
+                                <div>
+                                    <h4>Have Any Question?</h4>
+                                </div>
+                            </div>
+                            <div class="tour-details-booking-card-body ">
+                                <div class="d-flex flex-column gap-2">
+                                    <p>Do not hesitage to give us a call. We are an expert team and we are happy to talk
+                                        to you.</p>
+                                    <a href="#"><i class="iconify" data-icon="ic:baseline-mail"></i>Sent Email</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
