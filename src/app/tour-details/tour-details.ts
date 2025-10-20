@@ -3,10 +3,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 // import Navigation from 'swiper/modules/navigation/navigation.js';
 // import Pagination from 'swiper/modules/pagination/pagination.js';
 import Swiper from 'swiper/bundle';
-import 'swiper/css';
-import 'swiper/swiper-bundle.css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 
 
 @Component({
