@@ -1,0 +1,120 @@
+.related-tour {
+    padding: 40px 0;
+    background: rgba(84, 96, 120, 0.05);
+
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .swiper {
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+
+        .suggest-card {
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+            .suggest-card-top {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+
+                .suggest-card-location {
+                    position: absolute;
+                    top: 14px;
+                    left: 0;
+                    background: #ffffff;
+                    color: #000000;
+                    padding: 6px 12px;
+                    border-radius: 0 20px 20px 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    div {
+                        background: rgba(6, 85, 137, 0.2);
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        svg {
+                            font-size: 14px;
+                            color: #065489;
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: #065489;
+                    }
+                }
+            }
+
+            .suggest-card-bottom {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 14px 10px 4px 10px;
+
+                div:first-child {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                    h3 {
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin: 0;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #065489;
+                        margin: 0;
+                    }
+                }
+
+                div:last-child {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #546078;
+                        margin: 0;
+                    }
+
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: #065489;
+                        margin: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}

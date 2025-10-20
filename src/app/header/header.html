@@ -1,0 +1,135 @@
+<section class="nav-header-section">
+    <header class="header-part">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a routerLink="/"><img src="images/logo.png" alt="Tour Logo"></a>
+                </div>
+                <div class="header-top-left">
+                    <button class="search-icon-btn">
+                        <span class="iconify" data-icon="prime:search"></span>
+                    </button>
+                    <button class="flag-icon-btn">
+                        <img src="images/flag.png" alt="Flag">
+                    </button>
+                    <div class="header-currency-dropdown">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="currencyDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ selectedCurrency }}
+                            </button>
+
+                            <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+                                <li><a class="dropdown-item" (click)="setCurrency('USD')">USD — US Dollar</a></li>
+                                <li><a class="dropdown-item" (click)="setCurrency('EUR')">EUR — Euro</a></li>
+                                <li><a class="dropdown-item" (click)="setCurrency('GBP')">GBP — British Pound</a></li>
+                                <li><a class="dropdown-item" (click)="setCurrency('BDT')">BDT — Bangladeshi Taka</a>
+                                </li>
+                                <li><a class="dropdown-item" (click)="setCurrency('INR')">INR — Indian Rupee</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="sign-in-btn">
+                        Sign In
+                    </button>
+                </div>
+            </div>
+            <nav class="main-navigation-part">
+                <ul>
+                    <li><a routerLink="/"><span class="iconify" data-icon="clarity:plane-line"></span>
+                            <span>Flights</span></a></li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="mingcute:hotel-line"></span>
+                            <span>Hotel</span></a></li>
+                    <li><a routerLink="/"><span class="iconify"
+                                data-icon="fluent:luggage-24-regular"></span><span>Tour</span></a></li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="la:plane"></span><span>Charter</span></a>
+                    </li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="lineicons:car-2"></span><span>Rental
+                                Car</span></a></li>
+                    <li><a routerLink="/"><span class="iconify" data-icon="hugeicons:id"></span><span>Visa</span></a>
+                    </li>
+                    <li><a routerLink="/"><span class="iconify"
+                                data-icon="mdi:shield-airplane-outline"></span><span>Insurance</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- mobile header -->
+    <header class="mobile-header-part">
+        <div class="container">
+            <div class="mobile-header-top">
+                <div class="logo">
+                    <a routerLink="/"><img src="images/logo.png" alt="Tour Logo"></a>
+                </div>
+                <div class="mobile-header-right">
+                    <button class="search-icon-btn">
+                        <span class="iconify" data-icon="prime:search"></span>
+                    </button>
+                    <a class="mobile-menu-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample">
+                        <span class="iconify" data-icon="mdi:menu"></span>
+                    </a>
+
+                    <!-- offcanvas -->
+                    <div class="mobile-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <img src="images/logo.png" alt="logo">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul>
+                                <li><a routerLink="/"><span class="iconify" data-icon="clarity:plane-line"></span>
+                                        <span>Flights</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="mingcute:hotel-line"></span><span>Hotel</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="fluent:luggage-24-regular"></span><span>Tour</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="la:plane"></span><span>Charter</span></a>
+                                </li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="lineicons:car-2"></span><span>Rental Car</span></a></li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="hugeicons:id"></span><span>Visa</span></a>
+                                </li>
+                                <li><a routerLink="/"><span class="iconify"
+                                            data-icon="mdi:shield-airplane-outline"></span><span>Insurance</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="offcanvas-footer">
+                            <div class="header-currency-dropdown">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{ selectedCurrency }}
+                                    </button>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" (click)="setCurrency('USD')">USD — US Dollar</a>
+                                        </li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('EUR')">
+
+                                                EUR — Euro</a></li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('GBP')">
+                                                GBP — British Pound</a></li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('BDT')">
+                                                BDT — Bangladeshi Taka</a></li>
+                                        <li><a class="dropdown-item" (click)="setCurrency('INR')">
+                                                INR — Indian Rupee</a></li>
+                                    </ul>
+                                </div>
+                                <button class="sign-in-btn">
+                                    Sign In
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>

@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 
-
-
 @Component({
-  selector: 'app-tour-details',
+  selector: 'app-header',
   imports: [],
-  templateUrl: './tour-details.html',
-  styleUrl: './tour-details.scss'
+  templateUrl: './header.html',
+  styleUrl: './header.scss'
 })
-export class TourDetails {
+export class Header {
   selectedCurrency = 'USD';
   setCurrency(currency: string) {
     this.selectedCurrency = currency;
